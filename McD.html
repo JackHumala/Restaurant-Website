@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+      .mySlides {display: none;}
+      img {vertical-align: middle;
+      }
+
+      .slideshow-container {
+        position: relative;
+        margin: auto;
+  ;
+      }
+
+      .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #FBC02D;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active {
+        background-color: #D32F2F;
+      }
+
+      
+      .fade {
+        animation-name: fade;
+        animation-duration: 6s;
+      }
+
+      @keyframes fade {
+        from {opacity: 0.4} 
+        to {opacity: 1}
+      }
+
+    </style>
+  
+  
+  </head>
+
+
+  <!--Makes entire page red-->
+  <body class="bg-red-700">
+
+    <!--navigation bar-->
+      <!--Logo and Name-->
+    <nav class="p-5 bg-yellow-400 md:flex md:items-center md:justify-between z-100">
+      <div class="flex justify-between items-center">
+        <span class="text-3xl font[Helvatica] font-bold cursor-pointer">
+          <img class="h-30 inline" src="McLogo.png">
+          McDonald's
+        </span>
+      <!--Menu Icon-->
+        <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+          <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+        </span>
+      </div>
+      <!--Menu List-->
+      <ul class="md:flex md:items-center z-1 md:z-auto md:static absolute bg-yellow-400 w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 p1-7 md:opacity-100 opacity-00 top-[-400px] transition-all ease-in duration-500 z-index-100">
+        <li class="mx-4 my-6 md:my-0">
+          <a href="#" class = "text-2x1 font[Helvatica] font-semibold hover:text-red-700 duration-500">HOME</a>
+        </li>
+
+        <li class="mx-4  my-6 md:my-0">
+          <a href="#" class = "text-2x1 font[Helvatica] font-semibold hover:text-red-700 duration-500"> MENU  </a>
+        </li>
+        <li class="mx-4  my-6 md:my-0">
+          <a href="#" class = "text-2x1 font[Helvatica] font-semibold hover:text-red-700 duration-500"> ABOUT </a>
+        </li>
+        <li class="mx-4  my-6 md:my-0">
+          <a href="#" class = "text-2x1 font[Helvatica] font-semibold hover:text-red-700 duration-500"> CONTACT </a>
+        </li>
+      </ul>
+
+    </nav>
+
+    <!--Navigation Menu Functionality-->
+    <script>
+      function Menu(e){
+        let list = document.querySelector('ul');
+      e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
+    }
+    </script>
+
+
+    <!--Image slider-->
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <img src="McPic1.jpg" style="width:100%">
+      </div>
+      
+      <div class="mySlides fade">
+        <img src="McPic2.webp" style="width:100%">
+      </div>
+      
+      <div class="mySlides fade">
+        <img src="McPic3.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="McPic4.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="McPic5.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="McPic6.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="McPic7.jpg" style="width:100%">
+      </div>
+      
+      </div>
+      <br>
+      
+      <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span>
+      </div>
+      
+      <script>
+      let slideIndex = 0;
+      showSlides();
+      
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 5000); 
+      }
+      </script>
+
+      <div class="flex flex-col justify-center m-10 ">
+
+        <p class="text-center text-white font-bold space-y-10"> 
+          Business Hours
+        </p>
+        
+        <p class="text-center text-white font-semibold space-y-10"> 
+          Sunday  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  5AM-11PM
+        </p>
+
+        <p class="text-center text-white font-semibold space-y-10"> 
+          Monday  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  5AM-11PM
+        </p>
+        <p class="text-center text-white font-semibold space-y-10"> 
+          Tuesday  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5AM-11PM
+        </p>
+        <p class="text-center text-white font-semibold space-y-10"> 
+          Wednesday &nbsp; 5AM-11PM
+        </p>
+        <p class="text-center text-white font-semibold space-y-10"> 
+          Thursday  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  5AM-11PM
+        </p>
+        <p class="text-center text-white font-semibold space-y-10"> 
+          Friday  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5AM-11PM
+        </p>
+        <p class="text-center text-white font-semibold space-y-10"> 
+          Saturday  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  5AM-11PM
+        </p>
+
+      </div>
+
+
+
+      <!--Social Media Links & Copyright-->      
+      <footer class="flex flex-col space-y-10 justify-center m-10">
+        <div class="flex justify-center space-x-5">
+          <a href="https://www.facebook.com/McDonalds/" target="_blank" rel="noopener noreferrer">
+              <img src="https://img.icons8.com/fluent/30/000000/facebook-new.png" />
+          </a>
+
+          <a href="https://www.instagram.com/mcdonalds/" target="_blank" rel="noopener noreferrer">
+              <img src="https://img.icons8.com/fluent/33/000000/instagram-new.png" />
+          </a>
+
+          <a class="m-0.5" href="https://x.com/McDonalds" target="_blank" rel="noopener noreferrer">
+              <img src="https://img.icons8.com/?size=29&id=phOKFKYpe00C&format=png&color=000000" />
+          </a>
+        </div>
+      <p class="text-center text-gray-700 font-medium">&copy; 2017 - 2025 McDonald's. All Rights Reserved</p>
+  </footer>
+
+
+
+  </body>
+<html>
