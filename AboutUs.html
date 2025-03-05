@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </head>
+
+
+  <body>
+    <!--navigation bar-->
+      <!--Logo and Name-->
+      <nav class="p-5 bg-yellow-400 md:flex md:items-center md:justify-between z-100">
+        <div class="flex justify-between items-center">
+          <span class="text-3xl font[Helvatica] font-bold cursor-pointer">
+            <img class="h-30 inline" src="McLogo.png">
+            McDonald's
+          </span>
+        <!--Menu Icon-->
+          <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+            <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+          </span>
+        </div>
+        <!--Menu List-->
+        <ul class="md:flex md:items-center z-1 md:z-auto md:static absolute bg-yellow-400 w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 p1-7 md:opacity-100 opacity-00 top-[-400px] transition-all ease-in duration-500 z-index-100">
+          <li class="mx-4 my-6 md:my-0">
+            <a href="C:/Users/jackh/OneDrive/Desktop/Programming/Programs/WebDev/McD/McD.html" class = "text-2x1 font[Helvatica] font-semibold hover:text-red-700 duration-500">HOME</a>
+          </li>
+  
+          <li class="mx-4  my-6 md:my-0">
+            <a href="#" class = "text-2x1 font[Helvatica] font-semibold hover:text-red-700 duration-500"> MENU  </a>
+          </li>
+          <li class="mx-4  my-6 md:my-0">
+            <a href="#" class = "text-2x1 font[Helvatica] font-semibold hover:text-red-700 duration-500"> ABOUT </a>
+          </li>
+          <li class="mx-4  my-6 md:my-0">
+            <a href="#" class = "text-2x1 font[Helvatica] font-semibold hover:text-red-700 duration-500"> CONTACT </a>
+          </li>
+        </ul>
+  
+      </nav>
+  
+      <!--Navigation Menu Functionality-->
+      <script>
+        function Menu(e){
+          let list = document.querySelector('ul');
+        e.name === 'menu' ? (e.name = "close",list.classList.add('top-[150px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[150px]'),list.classList.remove('opacity-100'))
+      }
+      </script>
+
+
+
+      <div>
+        <p class="text-6xl font[Helvatica] font-bold text-center p-5">
+            About Us
+        </p>
+      </div>
+      
+      <div>
+        <img src="McPic8.jpg" style="width:100%; margin-right:auto; margin-left:auto;">
+        <p class="font[Helvatica] text-2xl font-bold text-center pt-10 pb-5 ">
+            Our Commitment To Quality
+        </p>
+        <p class="text-xl text-left pb-10 px-35 w-50%">
+            At McDonald's, we take great care to ensure that what we serve every day is safe, quality food. That means we use 100% real beef patties seasoned with just a pinch of salt and pepper. It means our Egg McMuffin® is made with a freshly cracked egg. And, our Filet-O-Fish® sandwich is made with 100% whitefish sourced from sustainably managed fisheries. It means our Chicken McNuggets® are made with white meat chicken. Simply put, it means real, quality ingredients and always evolving what matters to you.
+        </p>
+
+        <img src="McPic9.jpg" style="height:60%; margin-right:auto; margin-left:auto;">
+        <p class="font[Helvatica] text-2xl font-bold text-center pt-10 pb-5">
+            A Global Commitment to More Sustainable Beef
+        </p>
+        <p class="text-xl text-left pb-10 px-35 w-50%">
+            Burgers are an integral part of our menu, but that’s just one of the reasons we’re on a journey to advance more sustainable beef production. We’re striving to improve environmental practices in how beef is produced, make a positive difference in the lives of farmers, and to drive improvements in animal health and welfare. By joining forces with our partners, our beef sustainability goal is to influence industry-wide changes on a global scale.
+        </p>
+
+        <img src="McPic11.jpg" style="height:60%; margin-right:auto; margin-left:auto;">
+        <p class="font[Helvatica] text-2xl font-bold text-center pt-10 pb-5">
+            Commitment to Cage-Free Eggs
+        </p>
+        <p class="text-xl text-left pb-10 px-35 w-50%">
+            We’re proud of our commitment to only source cage-free eggs by 2025 in the U.S. and Canada, a commitment that has been said to have had a ripple effect throughout the industry. Today, McDonald’s USA is 60% of the way to our goal, and in 2020, we sourced more than 1.6 Billion cage-free eggs for our U.S. restaurants, some of which are used in our Egg McMuffin®.
+        </p>
+
+        <img src="McPic12.jpg" style="height:40%; margin-right:auto; margin-left:auto; margin-top:auto; margin-bottom:auto;">
+        <p class="font[Helvatica] text-2xl font-bold text-center pt-10 pb-5">
+            A More Balanced Happy Meal®
+        </p>
+        <p class="text-xl text-left pb-10 px-35 w-50%">
+            The Happy Meal® has been enjoyed by families around the world for decades, bringing people together to share moments and create lasting memories. Just as every family around the world is different, our Happy Meal changes with them.
+
+We recognize the important role we have in feeding millions of people every day, and in providing families with a variety of choices to meet their needs. Parents are looking for menu choices that they can feel good about feeding their kids, and that’s why we’re focused on evolving the Happy Meal (PDF, 1.9 MB) and making balanced meals more accessible to families across the globe.
+        </p>
+
+      </div>
+
+      <!--Social Media Links & Copyright-->      
+      <footer class="flex flex-col space-y-10 justify-center m-10">
+        <div class="flex justify-center space-x-5">
+          <a href="https://www.facebook.com/McDonalds/" target="_blank" rel="noopener noreferrer">
+              <img src="https://img.icons8.com/fluent/30/000000/facebook-new.png" />
+          </a>
+
+          <a href="https://www.instagram.com/mcdonalds/" target="_blank" rel="noopener noreferrer">
+              <img src="https://img.icons8.com/fluent/33/000000/instagram-new.png" />
+          </a>
+
+          <a class="m-0.5" href="https://x.com/McDonalds" target="_blank" rel="noopener noreferrer">
+              <img src="https://img.icons8.com/?size=29&id=phOKFKYpe00C&format=png&color=000000" />
+          </a>
+        </div>
+          <p class="text-center text-gray-700 font-medium">&copy; 2017 - 2025 McDonald's. All Rights Reserved</p>
+      </footer>
+
+  </body>
+  
+  
+</html>
