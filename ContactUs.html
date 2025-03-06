@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </head>
+
+
+  <body class="bg-linear-65 from-red-500 to-yellow-200">
+    <!--navigation bar-->
+      <!--Logo and Name-->
+      <nav class="p-5 bg-yellow-400 md:flex md:items-center md:justify-between z-100">
+        <div class="flex justify-between items-center">
+          <span class="text-3xl font[Helvatica] font-bold cursor-pointer">
+            <img class="h-30 inline" src="McLogo.png">
+            McDonald's
+          </span>
+        <!--Menu Icon-->
+          <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+            <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+          </span>
+        </div>
+        <!--Menu List-->
+        <ul class="md:flex md:items-center z-1 md:z-auto md:static absolute bg-yellow-400 w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 p1-7 md:opacity-100 opacity-00 top-[-400px] transition-all ease-in duration-500 z-index-100">
+          <li class="mx-4 my-6 md:my-0">
+            <a href="C:/Users/jackh/OneDrive/Desktop/Programming/Programs/WebDev/McD/McD.html" class = "text-2x1 font[Helvatica] font-semibold hover:text-red-700 duration-500">HOME</a>
+          </li>
+  
+          <li class="mx-4  my-6 md:my-0">
+            <a href="C:\Users\jackh\OneDrive\Desktop\Programming\Programs\WebDev\McD\Menu.html" class = "text-2x1 font[Helvatica] font-semibold hover:text-red-700 duration-500"> MENU  </a>
+          </li>
+          <li class="mx-4  my-6 md:my-0">
+            <a href="C:\Users\jackh\OneDrive\Desktop\Programming\Programs\WebDev\McD\AboutUs.html" class = "text-2x1 font[Helvatica] font-semibold hover:text-red-700 duration-500"> ABOUT </a>
+          </li>
+          <li class="mx-4  my-6 md:my-0">
+            <a href="C:\Users\jackh\OneDrive\Desktop\Programming\Programs\WebDev\McD\ContactUs.html" class = "text-2x1 font[Helvatica] font-semibold hover:text-red-700 duration-500"> CONTACT </a>
+          </li>
+        </ul>
+  
+      </nav>
+  
+      <!--Navigation Menu Functionality-->
+      <script>
+        function Menu(e){
+          let list = document.querySelector('ul');
+        e.name === 'menu' ? (e.name = "close",list.classList.add('top-[150px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[150px]'),list.classList.remove('opacity-100'))
+      }
+      </script>
+
+
+   
+        <div class="flex justify-between items-center flex h-screen w-95vw">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d755.709349494109!2d-73.92712878068797!3d40.74360330439794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25ed7220064a7%3A0x93c5f354db9d8b71!2sMcDonald&#39;s!5e0!3m2!1sen!2sus!4v1741125891808!5m2!1sen!2sus"
+            width="100%"
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            >
+          </iframe>
+        </div>
+
+        <div class="flex justify-evenly p-5 items-center ">
+            <p class="font[Helvatica] font-bold text-3xl text-center p-5">
+                Contact Us
+            </p>
+            <form class="flex flex-col items-start gap-4">
+                <input class="py-3  bg-white rounded-xl " type="text" name="name" placeholder="&nbsp; Your Name" required>
+                <input class="py-3 bg-white rounded-xl" type="email" name="email" placeholder="&nbsp; Your Email" required>
+                <textarea class="py-3 bg-white rounded-xl h-40 w-70" name="message" placeholder="&nbsp; Your message" required></textarea>
+                <button type="submit " ><img src="https://img.icons8.com/?size=30&id=25735&format=png&color=000000"></button>
+            </form>
+        </div>
+            
+ 
+
+
+
+
+
+
+   
+      <!--Social Media Links & Copyright-->      
+      <footer class="flex flex-col space-y-10 justify-center m-10">
+        <div class="flex justify-center space-x-5">
+          <a href="https://www.facebook.com/McDonalds/" target="_blank" rel="noopener noreferrer">
+              <img src="https://img.icons8.com/fluent/30/000000/facebook-new.png" />
+          </a>
+
+          <a href="https://www.instagram.com/mcdonalds/" target="_blank" rel="noopener noreferrer">
+              <img src="https://img.icons8.com/fluent/33/000000/instagram-new.png" />
+          </a>
+
+          <a class="m-0.5" href="https://x.com/McDonalds" target="_blank" rel="noopener noreferrer">
+              <img src="https://img.icons8.com/?size=29&id=phOKFKYpe00C&format=png&color=000000" />
+          </a>
+        </div>
+          <p class="text-center text-gray-700 font-medium">&copy; 2017 - 2025 McDonald's. All Rights Reserved</p>
+      </footer>
+    </body>
+</html>
+    
