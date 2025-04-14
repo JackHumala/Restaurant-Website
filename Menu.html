@@ -4,9 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="cart.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </head>
+
+
+
 
 
   <!--Makes entire page red-->
@@ -26,7 +30,7 @@
         </span>
       </div>
       <!--Menu List-->
-      <ul class="md:flex md:items-center z-1 md:z-auto md:static absolute bg-yellow-400 w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 p1-7 md:opacity-100 opacity-00 top-[-400px] transition-all ease-in duration-500 z-index-100">
+      <ul class="md:flex md:items-center z-1 md:z-auto md:static absolute bg-yellow-400 w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 p1-7 md:opacity-100 opacity-00 top-[-400px] transition-all ease-in duration-500 z-50">
         <li class="mx-4 my-6 md:my-0">
           <a href="index.html" class = "text-2x1 font[Helvatica] font-semibold hover:text-red-700 duration-500">HOME</a>
         </li>
@@ -52,8 +56,11 @@
     }
     </script>
 
+
+
+    <!-- Menus items -->
     <div class="grid md:grid-cols-4 grid-cols-2 gap-4 p-7">
-        <div class="rounded-xl flex flex-col items-center bg-white">
+        <div class="rounded-xl flex flex-col items-center bg-white hover:scale-105 shadow-xl">
             <img src="images/Menu1.jpg" style="width:60%; height:60%;">
             <p class="font-bold font[Helvatica] md:py-5 md:text-2xl">
              Big Mac®
@@ -66,7 +73,7 @@
             </p>
         </div>
 
-        <div class="rounded-xl flex flex-col items-center bg-white">
+        <div class="rounded-xl flex flex-col items-center bg-white hover:scale-105 shadow-xl">
             <img src="images/Menu2.jpg" style="width:60%; height:60%;">
             <p class="font-bold font[Helvatica] md:py-5 md:text-2xl">
                 Quarter Pounder®
@@ -79,7 +86,7 @@
             </p>
         </div>
 
-        <div class="rounded-xl flex flex-col items-center bg-white margin-left:auto margin-right:auto">
+        <div class="rounded-xl flex flex-col items-center bg-white margin-left:auto margin-right:auto hover:scale-105 shadow-xl">
             <img src="images/Menu3.jpg" style="width:60%; height:60%;">
             <p class="h4 font-bold font[Helvatica] md:py-5 md:text-2xl">
                 McChicken®
@@ -92,7 +99,7 @@
             </p>
         </div>
 
-        <div class="rounded-xl flex flex-col items-center bg-white margin-left:auto margin-right:auto">
+        <div class="rounded-xl flex flex-col items-center bg-white margin-left:auto margin-right:auto hover:scale-105 shadow-xl">
             <img src="images/Menu4.jpg" style="width:60%; height:60%;">
             <p class="h4 font-bold font[Helvatica] md:py-5 md:text-2xl">
                 Filet-O-Fish®
@@ -105,7 +112,7 @@
             </p>
         </div>
 
-        <div class="rounded-xl flex flex-col items-center bg-white">
+        <div class="rounded-xl flex flex-col items-center bg-white hover:scale-105 shadow-xl">
             <img src="images/Menu5.jpg" style="width:60%; height:60%;">
             <p class="font-bold font[Helvatica] md:py-5 md:text-2xl">
             Chicken McNuggets®
@@ -119,7 +126,7 @@
             </p>
         </div>
 
-        <div class="rounded-xl flex flex-col items-center bg-white">
+        <div class="rounded-xl flex flex-col items-center bg-white hover:scale-105 shadow-xl">
             <img src="images/Menu6.jpg" style="width:60%; height:60%;">
             <p class="font-bold font[Helvatica] md:py-5 md:text-2xl">
                 World Famous Fries®
@@ -133,7 +140,7 @@
             </p>
         </div>
 
-        <div class="rounded-xl flex flex-col items-center bg-white margin-left:auto margin-right:auto">
+        <div class="rounded-xl flex flex-col items-center bg-white margin-left:auto margin-right:auto hover:scale-105 shadow-xl">
             <img src="images/Menu7.jpg" style="width:60%; height:60%;">
             <p class="h4 font-bold font[Helvatica] md:py-5 md:text-2xl">
                 Hamburger Happy Meal®
@@ -146,7 +153,7 @@
             </p>
         </div>
 
-        <div class="rounded-xl flex flex-col items-center bg-white margin-left:auto margin-right:auto">
+        <div class="rounded-xl flex flex-col items-center bg-white margin-left:auto margin-right:auto hover:scale-105 shadow-xl">
             <img src="images/Menu8.jpg" style="width:60%; height:60%;">
             <p class="h4 font-bold font[Helvatica] md:py-5 md:text-2xl">
                 Chocolate Chip Cookie
@@ -159,7 +166,7 @@
             </p>
         </div>
 
-        <div class="rounded-xl flex flex-col items-center bg-white margin-left:auto margin-right:auto">
+        <div class="rounded-xl flex flex-col items-center bg-white margin-left:auto margin-right:auto hover:scale-105 shadow-xl">
             <img src="images/Menu9.jpg" style="width:60%; height:60%;">
             <p class="h4 font-bold font[Helvatica] md:py-5 md:text-2xl">
                 Hotcakes
@@ -172,7 +179,7 @@
             </p>
         </div>
 
-        <div class="rounded-xl flex flex-col items-center bg-white margin-left:auto margin-right:auto">
+        <div class="rounded-xl flex flex-col items-center bg-white margin-left:auto margin-right:auto hover:scale-105 shadow-xl">
             <img src="images/Menu10.jpg" style="width:60%; height:60%;">
             <p class="h4 font-bold font[Helvatica] md:py-5 md:text-2xl">
                 Hash Brown
@@ -187,6 +194,75 @@
 
 
     </div>
+
+
+
+
+    <!-- Shopping Cart Button-->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button onclick="toggleCart()" class="bg-yellow-400 hover:bg-yellow-500 text-red-700 font-bold p-4 rounded-full shadow-lg flex items-center transition-transform hover:scale-105">
+            <ion-icon name="cart"></ion-icon>
+            <span id="cart-count" class="ml-2 text-lg md:text-xl">0</span>
+        </button>
+    </div>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cart-modal" class="fixed inset-0 bg-opacity-50 z-50  hidden transition-opacity duration-300">
+        <div class="absolute  top-0 right-0 h-full w-full md:w-96 bg-white shadow-xl overflow-y-auto transform transition-transform duration-300 translate-x-full">
+            <div class="sticky top-0 bg-white p-4 border-b flex justify-between items-center">
+                <h2 class="text-xl md:text-2xl font-bold">Your Order</h2>
+                <button onclick="toggleCart()" class="text-gray-500 hover:text-red-700 p-1 rounded-full">
+                    <ion-icon name="close" class="text-2xl"></ion-icon>
+                </button>
+            </div>
+
+            <div id="cart-items" class="p-4">
+                <p class="text-gray-500 text-center py-8">Your cart is empty</p>
+            </div>
+            
+            <div class="sticky bottom-0 bg-white border-t p-4">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="font-bold text-lg">Total:</span>
+                    <span id="cart-total" class="font-bold text-lg">$0.00</span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="clearCart()" class="bg-gray-200 hover:bg-gray-300 text-gray-800 py-3 px-4 rounded-lg transition-colors">
+                    Clear Cart
+                    </button>
+                    <button onclick="checkout()" class="bg-yellow-400 hover:bg-yellow-500 text-red-700 py-3 px-4 rounded-lg transition-colors">
+                    Checkout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Item Selection Modal -->
+<div id="item-modal" class="fixed inset-0 bg-opacity-100 z-50 hidden transition-opacity duration-300">
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 max-w-md bg-white rounded-lg shadow-xl overflow-hidden">
+      <div class="p-4 border-b">
+        <div class="flex justify-between items-center">
+          <h2 id="item-modal-title" class="text-xl font-bold">ItemNameHere</h2>
+          <button onclick="closeItemModal()" class="text-gray-500 hover:text-red-700 p-1 rounded-full">
+            <ion-icon name="close" class="text-2xl"></ion-icon>
+          </button>
+        </div>
+      </div>
+      
+      <div id="item-modal-content" class="p-4">
+        <!-- Content will be added dynamically -->
+      </div>
+      
+      <div class="p-4 border-t">
+        <button onclick="addToCart()" class="w-full bg-yellow-400 hover:bg-yellow-500 text-red-700 py-3 px-6 rounded-lg font-bold transition-colors">
+          Add to Cart - <span id="item-total-price">$0.00</span>
+        </button>
+      </div>
+    </div>
+</div>
+
+
 
 
 
